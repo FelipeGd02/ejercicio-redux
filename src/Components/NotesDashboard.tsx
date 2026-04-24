@@ -1,5 +1,5 @@
 import { useDispatch, useSelector } from "react-redux";
-import { borrarNota } from "../Store/Slice/SliceNotes";
+import { deleteNote } from "../Store/Slice/SliceNotes";
 import type { RootState } from "../types/StoreTypes";
 
 export const NotesDashboard = () => {
@@ -38,7 +38,7 @@ export const NotesDashboard = () => {
               </div>
               <button
                 className="btn-delete"
-                onClick={() => dispatch(borrarNota(nota.id))}
+                onClick={() => dispatch(deleteNote(nota.id))}
               >
                 Eliminar
               </button>

@@ -1,8 +1,8 @@
-export type Nota = {
+export type Notas = {
   id: number;
   titulo: string;
   descripcion: string;
 };
-export type EstadoNotas = {
-  misNotas: Nota[];
+export type NotasEstado = {
+  misNotas: Notas[];
 };

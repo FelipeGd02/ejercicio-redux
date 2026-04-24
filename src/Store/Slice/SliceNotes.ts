@@ -1,18 +1,18 @@
 import { createSlice } from "@reduxjs/toolkit";
-import type { EstadoNotas } from "../../types/Notes";
+import type { NotasEstado } from "../../types/Notes";
 
-const initialState: EstadoNotas = {
+const initialState: NotasEstado = {
   misNotas: [],
 };
 
-const sliceNotas = createSlice({
+const sliceNotes = createSlice({
   name: "notas",
   initialState,
   reducers: {
-    crearNota: (state, action) => {
+    creteNote: (state, action) => {
       state.misNotas.push(action.payload);
     },
-    borrarNota: (state, action) => {
+    deleteNote: (state, action) => {
       state.misNotas = state.misNotas.filter(
         (nota) => nota.id !== action.payload
       );
@@ -20,5 +20,5 @@ const sliceNotas = createSlice({
   },
 });
 
-export const { crearNota, borrarNota } = sliceNotas.actions;
-export default sliceNotas.reducer;
+export const { creteNote, deleteNote } = sliceNotes.actions;
+export default sliceNotes.reducer;

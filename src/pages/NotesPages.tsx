@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { useDispatch } from "react-redux";
-import { crearNota } from "../Store/Slice/SliceNotes";
+import { creteNote } from "../Store/Slice/SliceNotes";
 
 export const NotesPages = () => {
   const [titulo, setTitulo] = useState<string>("");
@@ -11,7 +11,7 @@ export const NotesPages = () => {
   const handleAgregar = (e: React.MouseEvent<HTMLButtonElement>) => {
     e.preventDefault();
     if (!titulo || !descripcion) return;
-    dispatch(crearNota({ id: Date.now(), titulo, descripcion }));
+    dispatch(creteNote({ id: Date.now(), titulo, descripcion }));
     setTitulo("");
     setDescripcion("");
   };
